@@ -1,0 +1,76 @@
+<nav class="main-navbar">
+  <div class="container nav-container">
+    <button class="mobile-toggle" onclick="window.navbarComponent.toggleMobileMenu()" aria-label="Toggle Navigation">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <ul class="nav-menu" id="main-nav-menu">
+      <li class="nav-item">
+        <a href="#/" class="nav-link" id="nav-home">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#/products" class="nav-link" id="nav-products">
+          Our Product Range
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#/products?category=polyester-bra-cups" class="dropdown-link">
+            <span>Polyester Bra Cups</span>
+            <span class="dropdown-badge">4 items</span>
+          </a>
+          <a href="#/products?category=cotton-bra-cups" class="dropdown-link">
+            <span>Cotton Bra Cups</span>
+            <span class="dropdown-badge">3 items</span>
+          </a>
+          <a href="#/products?category=thermo-foam-bra-cup" class="dropdown-link">
+            <span>Thermo Foam Bra Cup</span>
+            <span class="dropdown-badge">2 items</span>
+          </a>
+          <a href="#/products?category=push-up-bra-cup" class="dropdown-link">
+            <span>Push Up Bra Cup</span>
+            <span class="dropdown-badge">1 item</span>
+          </a>
+          <a href="#/products?category=underarms-sweat-pads" class="dropdown-link">
+            <span>Underarms Sweat Pads</span>
+            <span class="dropdown-badge">1 item</span>
+          </a>
+          <a href="#/products?category=sports-bra-cups" class="dropdown-link">
+            <span>Sports Bra Cups</span>
+            <span class="dropdown-badge">1 item</span>
+          </a>
+          <a href="#/products?category=new-items" class="dropdown-link">
+            <span>New Items</span>
+            <span class="dropdown-badge">1 item</span>
+          </a>
+          <a href="#/products" class="dropdown-link font-bold text-primary" style="background:#fafafa;">
+            <span>View All Products &rarr;</span>
+          </a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a href="#/about" class="nav-link" id="nav-about">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#/testimonials" class="nav-link" id="nav-testimonials">Testimonials</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#/contact" class="nav-link" id="nav-contact">Contact Us</a>
+      </li>
+    </ul>
+
+    <button class="nav-right-quote" onclick="window.enquiryService.openEnquiryModal()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+      </svg>
+      Get Instant Quote
+    </button>
+  </div>
+</nav>

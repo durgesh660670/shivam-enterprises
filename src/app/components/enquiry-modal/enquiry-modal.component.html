@@ -1,0 +1,62 @@
+<div class="modal-overlay" id="enquiry-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div>
+        <h2 class="modal-title">Request Quotation</h2>
+        <div style="font-size: 0.8rem; color: var(--gray-500);">Direct to Shivam Enterprises, Mumbai</div>
+      </div>
+      <button class="modal-close" onclick="window.enquiryService.closeEnquiryModal()">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- Selected product preview if any -->
+      <div id="modal-product-preview" class="modal-selected-product d-none">
+        <img id="modal-product-img" src="" alt="Selected Product" class="modal-product-thumbnail" />
+        <div style="flex:1;">
+          <div id="modal-product-name" class="modal-selected-title">Product Name</div>
+          <div id="modal-product-price" class="modal-selected-price">₹ 0 / Set</div>
+        </div>
+      </div>
+
+      <form id="enquiry-form" onsubmit="window.enquiryModalComponent.onSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="modal-quantity">Estimated Order Quantity</label>
+          <input type="text" id="modal-quantity" class="form-control" placeholder="e.g. 500 Sets / 1000 Pieces" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-name">Your Full Name *</label>
+          <input type="text" id="modal-name" class="form-control" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="form-group">
+            <label class="form-label" for="modal-phone">Mobile Number *</label>
+            <input type="tel" id="modal-phone" class="form-control" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="modal-email">Email Address *</label>
+            <input type="email" id="modal-email" class="form-control" placeholder="name@company.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-notes">Requirement / Delivery Details</label>
+          <textarea id="modal-notes" class="form-control" rows="3" placeholder="Tell us about required thickness, shape, delivery location..."></textarea>
+        </div>
+
+        <div style="background: #f8fafc; border-radius: 6px; padding: 10px; margin-bottom: 16px; font-size: 0.78rem; color: var(--gray-600); display: flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" fill="none" stroke="#059669" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          Your contact information is protected and sent exclusively to Shivam Enterprises.
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+          Submit Request Now
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

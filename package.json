@@ -1,0 +1,25 @@
+{
+  "name": "shivam-enterprises-angular",
+  "version": "1.0.0",
+  "description": "Shivam Enterprises - Leading Bra Cups and Accessories Manufacturer Portal (Angular Component Architecture)",
+  "scripts": {
+    "ng": "ng",
+    "start": "npx serve src -p 4200",
+    "build": "echo \"Pure HTML/CSS/JS frontend ready - no compilation required\"",
+    "watch": "echo \"Watching for file changes...\""
+  },
+  "keywords": [
+    "shivam-enterprises",
+    "bra-cups",
+    "lingerie-accessories",
+    "angular",
+    "html5",
+    "css3"
+  ],
+  "author": "Shivam Enterprises",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

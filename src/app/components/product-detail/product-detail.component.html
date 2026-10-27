@@ -1,0 +1,42 @@
+<div class="modal-overlay" id="product-detail-modal">
+  <div class="modal-content" style="max-width: 680px;">
+    <div class="modal-header">
+      <h2 class="modal-title" id="detail-product-title">Product Details</h2>
+      <button class="modal-close" onclick="window.enquiryService.closeDetailModal()">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="detail-modal-layout">
+        <div class="detail-modal-image-box">
+          <img id="detail-product-img" src="" alt="Product" />
+        </div>
+
+        <div class="detail-modal-info">
+          <span class="badge badge-verified" id="detail-product-category">Category</span>
+          <div class="detail-modal-price" id="detail-product-price">₹ 0 / Set</div>
+          
+          <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--gray-700);">Product Specifications</h4>
+          <table class="detail-specs-table" id="detail-specs-body">
+            <!-- Injected via ProductDetailComponent -->
+          </table>
+
+          <div id="detail-product-desc-box" style="margin-bottom: 16px;">
+            <p style="font-size: 0.85rem; color: var(--gray-600);" id="detail-product-desc"></p>
+          </div>
+
+          <div class="d-flex gap-3">
+            <button class="btn btn-primary flex-1" id="detail-quote-btn" onclick="window.productDetailComponent.onRequestQuote()">
+              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              Get Best Price
+            </button>
+            <a href="tel:07949323547" class="btn btn-outline-secondary">
+              Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

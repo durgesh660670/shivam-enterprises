@@ -1,0 +1,66 @@
+<section class="section" style="padding-top: 24px;">
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div style="font-size: 0.85rem; color: var(--gray-500); margin-bottom: 18px;">
+      <a href="#/">Home</a> &gt; <span>Our Product Range</span> <span id="breadcrumb-category"></span>
+    </div>
+
+    <div class="catalog-layout">
+      <!-- Sidebar Categories -->
+      <aside class="catalog-sidebar">
+        <h2 class="sidebar-title">Categories</h2>
+        <ul class="category-list" id="sidebar-categories">
+          <!-- Injected via ProductsComponent -->
+        </ul>
+
+        <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--gray-200);">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); margin-bottom: 8px;">
+            Need Bulk Custom Orders?
+          </div>
+          <p style="font-size: 0.8rem; color: var(--gray-600); margin-bottom: 12px;">
+            We manufacture custom cup sizes and molds tailored to your requirements.
+          </p>
+          <button class="btn btn-outline-primary btn-sm" style="width: 100%;" onclick="window.enquiryService.openEnquiryModal()">
+            Send Custom Specs
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Product Grid & Controls -->
+      <main class="catalog-main">
+        <div class="catalog-toolbar">
+          <div class="catalog-info">
+            <h1 id="catalog-title">Our Product Range</h1>
+            <p class="text-muted" id="catalog-count-text">Showing 13 products</p>
+          </div>
+
+          <div class="catalog-controls">
+            <label for="catalog-sort" style="font-size: 0.85rem; font-weight: 600; color: var(--gray-600);">Sort By:</label>
+            <select id="catalog-sort" class="sort-select" onchange="window.productsComponent.onSortChange(this.value)">
+              <option value="default">Featured / Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="title-asc">Product Name (A - Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-3 gap-6" id="catalog-products-grid">
+          <!-- Injected via ProductsComponent -->
+        </div>
+
+        <div id="no-products-view" class="no-products d-none">
+          <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto 12px; color: var(--gray-400);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h3>No matching products found</h3>
+          <p class="text-muted" style="margin-top: 6px;">Try clearing your search query or choosing another category.</p>
+          <button class="btn btn-primary btn-sm" style="margin-top: 14px;" onclick="window.productsComponent.clearFilters()">
+            View All Products
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
