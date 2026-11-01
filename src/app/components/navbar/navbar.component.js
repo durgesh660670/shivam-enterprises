@@ -34,6 +34,11 @@ class NavbarComponent {
       document.getElementById('nav-home')?.classList.add('active');
     }
 
+    // Sync active state with Flipkart bottom navbar
+    if (window.bottomNavbarComponent && window.bottomNavbarComponent.setActiveLink) {
+      window.bottomNavbarComponent.setActiveLink(route);
+    }
+
     // Close mobile menu on navigate
     if (this.mobileMenuOpen) {
       this.toggleMobileMenu();

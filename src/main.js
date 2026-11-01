@@ -25,6 +25,11 @@
     const footerEl = appRoot.querySelector('footer-component');
     if (footerEl) footerEl.innerHTML = window.__TEMPLATES__.footer;
 
+    const bottomNavbarEl = appRoot.querySelector('bottom-navbar-component');
+    if (bottomNavbarEl && window.__TEMPLATES__.bottomNavbar) {
+      bottomNavbarEl.innerHTML = window.__TEMPLATES__.bottomNavbar;
+    }
+
     const enquiryModalEl = appRoot.querySelector('enquiry-modal-component');
     if (enquiryModalEl) enquiryModalEl.innerHTML = window.__TEMPLATES__.enquiryModal;
 

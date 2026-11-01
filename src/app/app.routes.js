@@ -54,8 +54,12 @@ class AppRouter {
       window.navbarComponent.setActiveLink(fullPath);
     }
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Ultra smooth scroll to top
+    if (window.bottomNavbarComponent && window.bottomNavbarComponent.ultraSmoothScrollToTop) {
+      window.bottomNavbarComponent.ultraSmoothScrollToTop(400);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     // Initialize component controller
     switch (componentName) {
